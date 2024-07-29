@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>News Detail - News Aggregator</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+<header>
+    <h1>NewsAggregator.com - Article Detail</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/news">News</a>
+        <a href="/settings">Settings</a>
+        <a href="/login">Login</a>
+    </nav>
+</header>
+<main>
+    <h2 th:text="${article.title}"></h2>
+    <p th:text="${article.content}"></p>
+</main>
+</body>
+</html>

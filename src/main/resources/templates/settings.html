@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings - News Aggregator</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+<header>
+    <h1>NewsAggregator.com</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/news">News</a>
+        <a href="/settings">Settings</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+    </nav>
+</header>
+<main>
+    <h2>User Settings</h2>
+    <form th:action="@{/settings}" th:object="${user}" method="post">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" th:field="*{username}">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" th:field="*{email}">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" th:field="*{password}">
+        </div>
+        <div>
+            <button type="submit">Save</button>
+        </div>
+    </form>
+</main>
+</body>
+</html>
